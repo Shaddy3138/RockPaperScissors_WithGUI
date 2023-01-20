@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="scenePane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rps_game_with_gui.GameEngineController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="601.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../ribbon_black.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="266.0" layoutY="156.0" text="VS" textFill="RED">
+         <font>
+            <Font name="JetBrains Mono ExtraBold Italic" size="50.0" />
+         </font>
+      </Label>
+      <Button fx:id="close" alignment="CENTER" layoutX="570.0" layoutY="14.0" mnemonicParsing="false" onAction="#terminate" style="-fx-background-color: red; -fx-background-radius: 30px; -fx-font-weight: 900; -fx-font-size: 12;" text="X" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="JetBrains Mono ExtraBold" size="13.0" />
+         </font>
+      </Button>
+      <HBox alignment="CENTER" fillHeight="false" layoutY="287.0" prefHeight="106.0" prefWidth="600.0" spacing="45.0">
+         <children>
+            <VBox prefHeight="60.0" prefWidth="60.0">
+               <children>
+                  <Button fx:id="rockBtn" alignment="CENTER" mnemonicParsing="false" onAction="#playerTurn" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView cache="true" cacheHint="QUALITY" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" smooth="false">
+                           <image>
+                              <Image url="@../../../rock_icon.png" />
+                           </image>
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow>
+                                         <color>
+                                          <Color red="0.7833211421966553" green="0.35782164335250854" blue="0.8684210777282715" />
+                                       </color>
+                                    </Shadow>
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox prefHeight="60.0" prefWidth="60.0">
+               <children>
+                  <Button fx:id="scissorsBtn" alignment="CENTER" mnemonicParsing="false" onAction="#playerTurn" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView cache="true" cacheHint="QUALITY" fitHeight="65.0" fitWidth="50.0" pickOnBounds="true" smooth="false">
+                           <image>
+                              <Image url="@../../../sicsors_icon.png" />
+                           </image>
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow>
+                                       <color>
+                                          <Color red="0.7833211421966553" green="0.35782164335250854" blue="0.8684210777282715" />
+                                       </color>
+                                    </Shadow>
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox prefHeight="60.0" prefWidth="60.0">
+               <children>
+                  <Button fx:id="paperBtn" alignment="CENTER" mnemonicParsing="false" onAction="#playerTurn" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView cache="true" cacheHint="QUALITY" fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" smooth="false">
+                                    <image>
+                              <Image url="@../../../paper_icon.png" />
+                           </image>
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow>
+                                       <color>
+                                          <Color red="0.7833211421966553" green="0.35782164335250854" blue="0.8684210777282715" />
+                                       </color>
+                                    </Shadow>
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <ImageView fitHeight="91.0" fitWidth="171.0" layoutX="245.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../df-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="playersName" layoutX="75.0" layoutY="230.0" text="PlayersName" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Semibold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="445.0" layoutY="230.0" text="Computer" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Semibold" size="15.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="player" fitHeight="100.0" fitWidth="150.0" layoutX="78.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="computer" fitHeight="100.0" fitWidth="150.0" layoutX="432.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="27.0" layoutY="29.0" text="Rounds Left :" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Semibold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="roundCounter" layoutX="120.0" layoutY="29.0" text="0/" textFill="#fcfcfc">
+         <font>
+            <Font name="Segoe UI Semibold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="roundLimit" layoutX="135.0" layoutY="29.0" text="0" textFill="#fcfcfc">
+         <font>
+            <Font name="Segoe UI Semibold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="result" alignment="CENTER" layoutX="196.0" layoutY="251.0" textFill="RED" AnchorPane.bottomAnchor="109.0" AnchorPane.leftAnchor="196.0" AnchorPane.rightAnchor="204.0">
+         <font>
+            <Font name="JetBrains Mono ExtraBold Italic" size="30.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

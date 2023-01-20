@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="scenePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="485.0" prefWidth="701.0" style="-fx-background-radius: 16px; -fx-border-radius: 32px;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rps_game_with_gui.LandingController">
+   <children>
+      <ImageView fitHeight="485.0" fitWidth="701.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../background.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="playerName" alignment="CENTER" layoutX="178.0" layoutY="410.0" prefHeight="51.0" prefWidth="231.0" style="-fx-background-radius: 16px;" text="PlayerName">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </TextField>
+      <Button fx:id="playBtn" layoutX="454.0" layoutY="414.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="98.0" style="-fx-background-radius: 16px;" text="Play!">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="close" alignment="CENTER" layoutX="661.0" layoutY="14.0" mnemonicParsing="false" onAction="#terminate" style="-fx-background-color: red; -fx-background-radius: 30px; -fx-font-weight: 900; -fx-font-size: 12;" text="X" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="JetBrains Mono ExtraBold" size="13.0" />
+         </font>
+      </Button>
+      <Label layoutX="124.0" layoutY="342.0" text="Difficulty / Best of:" textFill="WHITE">
+         <font>
+            <Font name="JetBrains Mono ExtraBold" size="18.0" />
+         </font>
+      </Label>
+      <ButtonBar layoutX="357.0" layoutY="346.0">
+         <buttons>
+            <RadioButton fx:id="threeRounds" accessibleText="3" mnemonicParsing="false" selected="true" text="3 Rounds" textFill="WHITE">
+               <toggleGroup>
+                  <ToggleGroup fx:id="Difficulty" />
+               </toggleGroup>
+               <font>
+                  <Font name="JetBrains Mono ExtraBold" size="12.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="fiveRounds" accessibleText="5" mnemonicParsing="false" text="5 Rounds" textFill="WHITE" toggleGroup="$Difficulty">
+               <font>
+                  <Font name="JetBrains Mono ExtraBold" size="12.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="sevenRounds" accessibleText="7" mnemonicParsing="false" text="7 Rounds" textFill="WHITE" toggleGroup="$Difficulty">
+               <font>
+                  <Font name="JetBrains Mono ExtraBold" size="12.0" />
+               </font>
+            </RadioButton>
+         </buttons>
+      </ButtonBar>
+   </children>
+   <effect>
+      <Blend />
+   </effect>
+</AnchorPane>

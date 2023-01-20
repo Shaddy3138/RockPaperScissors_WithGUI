@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="scenePane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rps_game_with_gui.ResultPageController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../ribbon_black.png" />
+         </image></ImageView>
+      <ImageView fitHeight="121.0" fitWidth="388.0" layoutX="106.0" layoutY="237.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../ribbon.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="playAgain" layoutX="237.0" layoutY="348.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="126.0" style="-fx-background-radius: 16px;" text="Play Again!">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="close" alignment="CENTER" layoutX="562.0" layoutY="14.0" mnemonicParsing="false" onAction="#terminate" style="-fx-background-color: red; -fx-background-radius: 30px; -fx-font-weight: 900; -fx-font-size: 12;" text="X" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="JetBrains Mono ExtraBold" size="13.0" />
+         </font>
+      </Button>
+      <Label layoutX="210.0" layoutY="14.0" text="SCORES" textFill="#fffefe">
+         <font>
+            <Font name="JetBrains Mono ExtraBold Italic" size="50.0" />
+         </font>
+      </Label>
+      <Label layoutX="75.0" layoutY="81.0" text="Games Played = " textFill="#fffefe">
+         <font>
+            <Font name="JetBrains Mono ExtraBold Italic" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="75.0" layoutY="138.0" text="Games Won = " textFill="#fffefe">
+         <font>
+            <Font name="JetBrains Mono ExtraBold Italic" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="75.0" layoutY="188.0" text="Games Lost = " textFill="#fffefe">
+         <font>
+            <Font name="JetBrains Mono ExtraBold Italic" size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="gamesPlayed" layoutX="338.0" layoutY="81.0" text="0" textFill="#fffefe">
+         <font>
+            <Font name="JetBrains Mono ExtraBold Italic" size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="gamesWon" layoutX="338.0" layoutY="138.0" text="0" textFill="#3cff01">
+         <font>
+            <Font name="JetBrains Mono ExtraBold Italic" size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="gamesLost" layoutX="338.0" layoutY="188.0" text="0" textFill="#e40000">
+         <font>
+            <Font name="JetBrains Mono ExtraBold Italic" size="30.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
